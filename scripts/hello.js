@@ -1,0 +1,1 @@
+alert('Bienvenido a mi CV a través de un script externo');
