@@ -21,11 +21,164 @@
     h6 {
       font-family: "Roboto", sans-serif
     }
+
+    .boton {
+      margin-left: 5px;
+    }
+
+    .texto {
+      transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      overflow: hidden;
+      height: 0;
+    }
+
+    .texto-oculto {
+      height: 87px;
+    }
+    body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #fff;
+        }
+
+        .card {
+            position: relative;
+            width: 350px;
+            height: 190px;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 0 10px black;
+            transition: .5s;
+            top: 20px;
+            transform: translateX(8%);
+            
+        }
+
+        .card:hover {
+            height: 450px;
+        }
+
+        .imgBx {
+
+            position: absolute;
+            left: 50%;
+            top: -35px;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            background-color: #fff;
+            border-radius: 30px;
+            /* box-shadow: 0 15px 50px black; */
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .card:hover .imgBx {
+            width: 250px;
+            height: 250px;
+        }
+
+        .imgBx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card .content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .card .content .details {
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            transition: .5px;
+            transform: translateY(140px);
+        }
+
+        .card:hover .content .details {
+            transform: translateY(0);
+        }
+
+        .card .content .details h2 {
+            font-size: 1.25em;
+            font-weight: 600;
+            color: #555;
+            line-height: 1.2em;
+
+        }
+
+        .card .content .details h2 span {
+            font-size: 0.75em;
+            font-weight: 500;
+            opacity: .5;
+
+        }
+
+        .card .content .details .data {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+        }
+
+        .card .content .details .data h3 {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.2em;
+            font-weight: 600;
+            
+
+        }
+        .card .content .details .data h3 span{
+            font-size: 0.85em;
+            font-weight: 400;
+            opacity: .5;
+            
+
+        }
+        .card .content .details .actionBtn{
+            display: flex;
+
+            justify-content: space-between;
+
+        }
+
+        .card .content .details .actionBtn button{
+            padding: 10px 30px;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            font-weight: 500;
+            background: #ff5f95;
+            color: #fff;
+            cursor: pointer;
+
+        }
+
+        .card .content .details .actionBtn button:nth-child(2){
+            
+            border: 1px solid #999;
+            color: #999;
+            background: #fff;
+
+        }
   </style>
 </head>
 
 <body class="w3-light-grey">
-  
+
   <!-- Contenedor principal -->
   <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
@@ -36,19 +189,43 @@
       <div class="w3-third">
 
         <div class="w3-white w3-text-grey w3-card-4">
-          <div class="w3-display-container">
+          <!-- <div class="w3-display-container">
             <img
               src="https://media-exp1.licdn.com/dms/image/C4E03AQFiO6zQo_9bUw/profile-displayphoto-shrink_800_800/0/1655849258409?e=1661385600&v=beta&t=U26Zx04N_KmVxlfOyABCL81au2ZRnC6TnEkfy1gd3ho"
               style="width:100%" alt="Avatar">
             <div class="w3-display-bottomleft w3-container w3-text-white">
               <h2>Alejandro De la Rosa Cosano</h2>
             </div>
+          </div> -->
+          <div class="card">
+            <div class="imgBx">
+              <img src="images/cvprofile.jpg" alt="cv">
+            </div>
+            <div class="content">
+              <div class="details">
+                <h2>Alejandro De la Rosa<br><span>Junior Web Dev</span></h2>
+
+                <div class="data">
+                  <h3>Correo<br><span>aledelarosa2@</span></h3>
+                  <h3>Telefono<br><span> (+34)676 588 151</span></h3>
+                  <!-- <h3> <br><span>link</span></h3> -->
+                </div>
+
+                <div class="actionBtn">
+                  <button><a href="https://github.com/RubiksDAW">Github</a></button>
+                  <button><a href="https://www.linkedin.com/in/alejandrodelarosacosano/">LinkedIn</a></button>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Desarrollador Web Junior</p>
+          <div class="w3-container"><br>
+            <!-- <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Desarrollador Web Junior</p> -->
             <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Sevilla, España</p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto: aledelarosa2@gmail.com">aledelarosa2@gmail.com</a></p>
-            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="tel: (+34) 676 588 141">(+34) 676 588 141</a></p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a
+                href="mailto: aledelarosa2@gmail.com">aledelarosa2@gmail.com</a></p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><a
+                href="tel: (+34) 676 588 141">(+34) 676 588 141</a></p>
             <hr>
 
             <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Habilidades</b></p>
@@ -72,7 +249,8 @@
             </div>
             <br>
 
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b></p>
+            <p class="w3-large w3-text-theme"><b><i
+                  class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b></p>
             <p>Inglés</p>
             <div class="w3-light-grey w3-round-xlarge">
               <div class="w3-round-xlarge w3-teal" style="height:24px;width:70%"></div>
@@ -82,8 +260,9 @@
               <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
             </div>
             <br>
-            
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-gears fa-fw w3-margin-right w3-text-teal"></i>Formacion no reglada</b></p>
+
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-gears fa-fw w3-margin-right w3-text-teal"></i>Formacion
+                no reglada</b></p>
             <p><i>- Prevención de riesgos laborales (100 horas).</i></p>
             <p><i>- Tiendas virtuales y emprendimiento (90 horas).</i></p>
             <p><i>- Analítica Web orientada al marketing (30 horas).</i></p>
@@ -102,37 +281,50 @@
           <h2 class="w3-text-grey w3-padding-16"><i
               class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiencia laboral</h2>
           <div class="w3-container">
-            <h5 class="w3-opacity"><b>Desarrollor Junior (FP Dual) / NTTData</b></h5>
+            <h5 class="w3-opacity"><b>Desarrollador Junior (FP Dual) / NTTData</b></h5>
             <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Marzo 2022 - <span
-                class="w3-tag w3-teal w3-round">Presente</span></h6>
-            <p>Realización de las prácticas relativas a la FP Superior llevadas a cabo en el IES Sotero Hernández
-              (Sevilla)</p>
+                class="w3-tag w3-teal w3-round">Presente</span><button class="boton">+ Info</button></h6>
+            <!-- <button>+ Info</button> -->
+            <p class="texto">Realización de las prácticas relativas a la FP Superior llevadas a cabo en el IES Sotero
+              Hernández (Sevilla). Estas prácticas han sido realizadas en alternancia con la formación en la escuela, de
+              forma facilita la adaptación
+              del campo teórico al práctico. </p>
             <hr>
           </div>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Ayudante Diseño Gráfico / Secuoya Contenidos S.L</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
-            <p>Creación de distintos elementos gráficos para el programa de televisión Mesa de Analisis (Canal Sur)
-              durante las prácticas realizadas
-              a través del proyecto REDES+.</p>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014<button
+                class="boton">+ Info</button></h6>
+            <!-- <button>+ Info</button> -->
+            <p class="texto">Creación de distintos elementos gráficos para el programa de televisión Mesa de Analisis
+              (Canal Sur) durante las prácticas realizadas a través del proyecto REDES+. Destacar la adquisición de
+              gestión del tiempo adquirido en este puesto
+              debido a que las infografías y demás recursos debían ser entregados en tiempos muy específicos.</p>
             <hr>
           </div>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Ayudante de Marketing / Approx Iberia S.L</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017 - Feb 2018</h6>
-            <p> Creacion de e-mailings, banners y demás elementos de diseó, tanto para páginas web, como para formatos
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017 - Feb 2018 <button
+                class="boton">+ Info</button></h6>
+            <!-- <button>+ Info</button> -->
+            <p class="texto"> Creacion de e-mailings, banners y demás elementos de diseó, tanto para páginas web, como
+              para formatos
               impresos. Gestión de artículos en sus respectivas webs. Además de la redacción de artículos, noticias y
               diferentes funciones relacionadas con la gestión de la web corporativa y sus redes sociales. </p><br>
           </div>
         </div>
-       
+
         <div class="w3-container w3-card w3-white">
           <h2 class="w3-text-grey w3-padding-16"><i
               class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Formación reglada</h2>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Desarrollo de Aplicaciones Web</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - <span class="w3-tag w3-teal w3-round">Presente</span></h6>
-            <p>Ciclo Superior, en modalidad Dual realizado en el IES Sotero Hernández. El cual se imparte con la
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - <span
+                class="w3-tag w3-teal w3-round">Presente</span> <button class="boton">+ Info</button></h6>
+            <!-- <button>+ Info</button> -->
+
+            <p class="texto">Ciclo Superior, en modalidad Dual realizado en el IES Sotero Hernández. El cual se imparte
+              con la
               finalidad de enseñar a desarrollar, implantar y mantener aplicaciones web, garantizando los criterios de
               calidad establecidos y la seguridad en el acceso a los datos. Durante esta formación se imparte materia
               acerca de los siguientes lenguajes: JAVA, HTML, CSS, JS y SQL entre otros.</p>
@@ -140,14 +332,27 @@
           </div>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Comunicación Audiovisual</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2018</h6>
-            <p>Grado impartido por la Facultad de Comunicación de Sevilla, en el cual se fomentó, además de la adquisición de la teoría impartida durante esos años, la adquisición de habilidades como la autocrítica, razonamiento verbal, el trabajo en equipo, capacidad expresiva, análisis y solución de problemas con plazos de tiempo marcados.</p>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 - 2018 <button
+                class="boton">+ Info</button></h6>
+            <!-- <button>+ Info</button> -->
+            <p class="texto">Grado impartido por la Facultad de Comunicación de Sevilla, en el cual se fomentó, además
+              de la
+              adquisición de la teoría impartida durante esos años, la adquisición de habilidades como la autocrítica,
+              razonamiento verbal, el trabajo en equipo, capacidad expresiva, análisis y solución de problemas con
+              plazos de tiempo marcados.</p>
             <hr>
           </div>
           <div class="w3-container">
             <h5 class="w3-opacity"><b>Diseño Gráfico y Web</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2018</h6>
-            <p>Máster en Diseño Gráfico y Web, entre los lenguajes estudiados destacan lenguajes como HTML, CSS y PHP. Por otro lado también recibí formación en herramientas de diseño como Photoshop, Illustrator e InDesign.</p><br>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016 - 2018 <button
+                class="boton">+ Info</button></h6>
+            <!-- <button>+ Info</button> -->
+
+            <p class="texto">Máster en Diseño Gráfico y Web, entre los lenguajes estudiados destacan lenguajes como
+              HTML, CSS y PHP. Por otro lado también recibí formación en herramientas de diseño como Photoshop,
+              Illustrator e InDesign, con el fin de integrar
+              los conocimientos adquiridos en la parte de diseño gráfico al diseño web.
+            </p><br>
           </div>
         </div>
 
@@ -160,15 +365,16 @@
     <!-- Fin Contenedor Pagina -->
   </div>
 
-  <footer class="w3-container w3-teal w3-center w3-margin-top">
+  <!-- <footer class="w3-container w3-teal w3-center w3-margin-top">
     <p><i>Contacto</i></p>
     <i class="fa fa-github fa-fw w3-hover-opacity"><a href="https://github.com/RubiksDAW"></a></i>
     <i class="fa fa-at  fa-fw w3-hover-opacity"><a href="aledelarosa2@gmail.com"></a></i>
-    <a href="https://www.linkedin.com/in/alejandrodelarosacosano/"><i class="fa fa-linkedin fa-fw w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/alejandrodelarosacosano/"><i
+        class="fa fa-linkedin fa-fw w3-hover-opacity"></i></a>
     <p></p>
     <br>
-  </footer>
-
+  </footer> -->
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
